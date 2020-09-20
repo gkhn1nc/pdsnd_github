@@ -1,11 +1,19 @@
 ### Date created
 Include the date you created this project and README file.
 
+Created on 19.9.2020
+
 ### Project Title
 Replace the Project Title
 
+Bikeshare Project
+
 ### Description
 Describe what your project is about and what it does
+
+In this project, Python code will be written to get a US bike share and questions about it will be answered by computing descriptors. You will also write a script that takes raw input.
+
+Analysis reports will be created on the outputs.
 
 ### Files used
 Include the files used
