@@ -177,6 +177,7 @@ def user_stats(df):
 
 def main():
     while True:
+        # TO DO: 3 informations entered on the screen are assigned to variables by get_filter
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -185,6 +186,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         
+        # TO DO: Lists the records in increments of five according to the demand to be entered on the screen.
         data_req = input('\nWould you like to see the first 5 data? Enter yes or no.\n')
         if data_req.lower() =='yes':
             start=0

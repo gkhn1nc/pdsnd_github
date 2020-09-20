@@ -12,7 +12,6 @@ Bikeshare Project
 Describe what your project is about and what it does
 
 In this project, Python code will be written to get a US bike share and questions about it will be answered by computing descriptors. You will also write a script that takes raw input.
-
 Analysis reports will be created on the outputs.
 
 ### Files used
