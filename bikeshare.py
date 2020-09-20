@@ -81,15 +81,15 @@ def time_stats(df):
 
     # TO DO: display the most common month
     popular_month=df['month'].mode()[0]
-    print("The most popular month: ",popular_month)
+    print('The most popular month: {}'.format(popular_month))
 
     # TO DO: display the most common day of week
     popular_day_week=df['day_of_week'].mode()[0]
-    print("The most popular week: ",popular_day_week)
+    print('The most popular week : {}'.format(popular_day_week))
 
     # TO DO: display the most common start hour
     popular_hour=df['Start Time'].dt.hour.mode()[0]
-    print("The most popular hour: ",popular_hour)
+    print('The most popular hour : {}'.format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -103,18 +103,18 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     popular_start_station=df['Start Station'].mode()[0]
-    print("The most popular start station: ",popular_start_station)
+    print('The most popular start station: {}'.format(popular_start_station))
 
 
     # TO DO: display most commonly used end station
     popular_end_station=df['End Station'].mode()[0]
-    print("The most popular end station: ",popular_end_station)
+    print('The most popular end station  : {}'.format(popular_end_station))
 
 
     # TO DO: display most frequent combination of start station and end station trip
     combination= df['Start Station'].str.cat(df['End Station'], sep ="->") 
     p_comb_station=combination.mode()[0]
-    print("The most popular route: ",p_comb_station)
+    print('The most popular route        : {}'.format(p_comb_station))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -147,14 +147,14 @@ def user_stats(df):
     # TO DO: Display counts of user types
     if 'User Type' in df.columns:
         count_user_type = df.groupby(['User Type'])['User Type'].count()
-        print("Counts of user types:\n",count_user_type)
+        print('Counts of user types:\n {}'.format(count_user_type))
     else:
         print("no User Type column information for this city!")
 
     # TO DO: Display counts of gender
     if 'Gender' in df.columns:
         count_gender = df.groupby(['Gender'])['Gender'].count()
-        print("\nCounts of gender:\n",count_gender)
+        print('\nCounts of gender  :\n {}'.format(count_gender))
     else:
         print("\nno Gender column information for this city!\n")
 
@@ -163,9 +163,9 @@ def user_stats(df):
         earliest_birth=df['Birth Year'].min()
         recent_birth=df['Birth Year'].max()
         common_birth=df['Birth Year'].mean()
-        print("\nThe earliest date of birth: ",earliest_birth)
-        print("\nThe newest date of birth: ",recent_birth)
-        print("\nThe most common date of birth: ",common_birth)
+        print('\nThe earliest date of birth   : {}'.format(earliest_birth))
+        print('\nThe newest date of birth     : {}'.format(recent_birth))
+        print('\nThe most common date of birth: {}'.format(common_birth))
     else:
         print("\nThe earliest date of birth: 0")
         print("\nThe newest date of birth: 0")
