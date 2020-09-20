@@ -147,14 +147,14 @@ def user_stats(df):
     # TO DO: Display counts of user types
     if 'User Type' in df.columns:
         count_user_type = df.groupby(['User Type'])['User Type'].count()
-        print("Counts of user types:\n",count_user_type)
+        print('Counts of user types:\n {}'.format(count_user_type))
     else:
         print("no User Type column information for this city!")
 
     # TO DO: Display counts of gender
     if 'Gender' in df.columns:
         count_gender = df.groupby(['Gender'])['Gender'].count()
-        print("\nCounts of gender:\n",count_gender)
+        print('\nCounts of gender  :\n {}'.format(count_gender))
     else:
         print("\nno Gender column information for this city!\n")
 
@@ -163,9 +163,9 @@ def user_stats(df):
         earliest_birth=df['Birth Year'].min()
         recent_birth=df['Birth Year'].max()
         common_birth=df['Birth Year'].mean()
-        print("\nThe earliest date of birth: ",earliest_birth)
-        print("\nThe newest date of birth: ",recent_birth)
-        print("\nThe most common date of birth: ",common_birth)
+        print('\nThe earliest date of birth   : {}'.format(earliest_birth))
+        print('\nThe newest date of birth     : {}'.format(recent_birth))
+        print('\nThe most common date of birth: {}'.format(common_birth))
     else:
         print("\nThe earliest date of birth: 0")
         print("\nThe newest date of birth: 0")
